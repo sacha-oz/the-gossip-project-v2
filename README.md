@@ -1,24 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Instructions : 
 
-Things you may want to cover:
+Téléchargez le repo
+Faites "bundle install"
+Puis "rails db:seed"
+Puis "rails server"
+Rendez vous sur le lien classique "http://localhost:3000/"
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Enjoy ma première vraie application !
