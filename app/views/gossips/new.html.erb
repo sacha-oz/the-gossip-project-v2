@@ -1,0 +1,31 @@
+<h1> Créer un gossip</h1>
+
+
+<form action= <%= gossips_path %> method="POST">
+      <input type="hidden" name="authenticity_token" value=<%= form_authenticity_token %> >
+
+      Title :<br>
+      <input type="text" name="title"> <br>
+      Content :<br>
+      <input type="text" name="content"> <br> <br>
+      <input type="submit" value="Envoie ton potin">
+</form>
+
+<% if @gossip.errors.any? %>
+      <div class="alert alert-danger" role="alert">
+        <p>Nous n'avons pas réussi à créer le potin pour la (ou les) raison(s) suivante(s) :</p>
+        <ul>
+          <% @gossip.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+
+<% else %>
+	<div class="alert alert-success" role="alert">
+  		<p> Nous avons réussi à créer le potion </p>
+	</div>
+
+<% end %>
+
+

@@ -1,11 +1,19 @@
+<% if flash[:success] %>
+   <div class="alert alert-success" role="alert">
+   <h4 class="alert-heading">Congrats</h4>
+   <hr>
+   <div class=“success”><%= flash[:success]%></div>
+   </div>
+ <% end %>
 
-
+<div class="jumbotron">
 <div class="container">
-
-<h1>Bonjour cher visiteur</h1>
+  <h1 class="display-3">Hello, cher visiteur!</h1>
+  <p>Tu es arrivé sur le site des potins ! Ici, tu découvriras pourquoi John a trompé Jessica avec Sarah, pourquoi Thomas a déménagé et encore bien d'autres secrets très utiles à la société. </p>
+</div>
+</div>
 
 <% Gossip.all.each do |gossip| %>
-
 <div class="card">
   <div class="card-header">
     POTIN n°<%= gossip.id %>
@@ -13,11 +21,11 @@
   <div class="card-body">
     <h5 class="card-title">L'auteur : <%=  gossip.user.first_name%></h5>
     <p class="card-text">Le titre : <%=  gossip.title%></p>
-    <a href="home/<%= gossip.id %>" class="btn btn-primary">Clique pour voir la page du potin </a> <br><br><br><hr/>
+    <a href="gossips/<%= gossip.id %>" class="btn btn-primary">Clique pour voir la page du potin </a> <br><br><br><hr/>
   </div>
 </div>
 <% end %>
 
 
-
 </div>
+
